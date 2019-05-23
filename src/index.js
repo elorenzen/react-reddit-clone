@@ -45,7 +45,40 @@ const Nav = () => {
                     </form>
                 </div>
                 
+                <div class="nav-item" id='nav-icons'>
+                    <a href="#"><i class="fas fa-chart-line"></i></a>
+                    <a href="#"><i class="fas fa-chart-pie"></i></a>
+                    <a href="#" class="border-right"><i class="fas fa-quote-left"></i></a>
+                    <a href="#"><i class="fas fa-comment"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                    <a href="#"><i class="fas fa-edit"></i></a>
+                </div>
 
+                <div class="nav-item dropdown" id='profile-dropdown'>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Username
+                    </a>
+                        <div class="dropdown-menu" id='profile-icons' aria-labelledby="navbarDropdownMenuLink">
+                        <p>MY STUFF</p>
+                        <ul>
+                            <a class="dropdown-item" href="#"><i class="fas fa-user"></i>My Profile</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-cog"></i>User Settings</a>
+                        </ul>
+                        <p>VIEW OPTIONS</p>
+                        <ul>
+                            <a class="dropdown-item" href="#"><i class="fas fa-moon"></i>Night Mode</a>
+                        </ul>
+                        <p>MORE STUFF</p>
+                        <ul>
+                            <a class="dropdown-item" href="#"><i class="fas fa-coins"></i>Reddit Coins</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-shield-alt"></i>Reddit Premium</a>
+                            <a class="dropdown-item" href="#"><i class="far fa-question-circle"></i>Help Center<small><i class="fas fa-external-link-alt"></i></small></a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-external-link-alt"></i>Visit Old Reddit<small><i class="fas fa-external-link-alt"></i></small></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Log Out</a>
+                        </ul>
+                    </div>
+                </div>
             </div>   
         </nav>
     ) 
