@@ -38,6 +38,14 @@ const Nav = () => {
                         </ul>
                     </div>
                 </div>
+        
+                <div class="nav navbar-nav">
+                    <form class="nav-item">
+                        <input class="form-control mr-sm-2" id='nav-search' type="search" placeholder="Search Reddit" aria-label="Search" />
+                    </form>
+                </div>
+                
+
             </div>   
         </nav>
     ) 
