@@ -2,11 +2,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TopNavbar from './TopNavbar';
+import SecondNavbar from './SecondNavbar';
 
 // Create React nav component
 const App = () => {
     return (
-        <TopNavbar />
+        <div>
+            <TopNavbar />
+            <SecondNavbar />
+        </div>
     ) 
 };
 
