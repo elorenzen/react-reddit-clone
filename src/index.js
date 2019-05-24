@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TopNavbar from './TopNavbar';
 import SecondNavbar from './SecondNavbar';
+import Sidebar from './Sidebar';
 
 // Create React nav component
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
         <div>
             <TopNavbar />
             <SecondNavbar />
+            <Sidebar />
         </div>
     ) 
 };
