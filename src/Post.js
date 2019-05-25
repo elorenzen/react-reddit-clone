@@ -1,7 +1,7 @@
 import React from 'react';
 import faker from 'faker';
 
-const Post = () => {
+const Post = (props) => {
     return (
         <div className="post">
             {/* POST SHOULDER */}
@@ -11,7 +11,7 @@ const Post = () => {
                         <i className="fas fa-arrow-up"></i>
                     </button>
                     <div className="post_votes" style={{display: 'block', color: 'rgb(26, 26, 27)'}}>
-                        {faker.random.number()}                 
+                        {props.votes}                 
                     </div>
                     <button className="downvote">
                         <i className="fas fa-arrow-down"></i>
@@ -29,18 +29,18 @@ const Post = () => {
                                 <div className="post_content_header_text">
                                     <div style={{display: 'inline-block', flex: '0 0 auto'}}>
                                         <a href="/" className="subreddit_name" style={{color: 'rgb(28, 28, 28)'}}>
-                                            subredditName
+                                            r/{props.subredditName}
                                         </a>
                                     </div>
                                     <span className="post_divider">•</span>
                                     <span className="posted_by">Posted by</span>
                                     <div style={{display: 'inline-block'}}>
                                         <a href="/" className="post_author">
-                                            author
+                                            {props.author}
                                         </a>
                                     </div>
                                     <a href="/" className="posted_date">
-                                        timeSincePosting
+                                        {props.hoursSincePosting} hours ago
                                     </a>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ const Post = () => {
                             <span className="post_content_title_container">
                                 <a href="/" className="post_title_url">
                                     <h2 className="post_title">
-                                        title
+                                        {props.title}
                                     </h2>
                                 </a>
                             </span>
@@ -59,7 +59,7 @@ const Post = () => {
                                             
                         {/* CODE FOR THE POST TEXT */}
                         <div className="post_text">
-                            text
+                            {props.text}
                         </div>
                     </div> {/* End of 'post_content_text' */}
 
