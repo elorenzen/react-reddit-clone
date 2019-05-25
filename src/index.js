@@ -18,8 +18,8 @@ const App = () => {
                         <Post />
                     </div>
                 </div>
+                <Sidebar />
             </div>
-            <Sidebar />
         </div>
     ) 
 };
