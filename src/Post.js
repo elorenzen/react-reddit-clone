@@ -11,7 +11,7 @@ const Post = (props) => {
                         <i className="fas fa-arrow-up"></i>
                     </button>
                     <div className="post_votes" style={{display: 'block', color: 'rgb(26, 26, 27)'}}>
-                        {props.votes}                 
+                        {faker.random.number()}                 
                     </div>
                     <button className="downvote">
                         <i className="fas fa-arrow-down"></i>
@@ -29,18 +29,18 @@ const Post = (props) => {
                                 <div className="post_content_header_text">
                                     <div style={{display: 'inline-block', flex: '0 0 auto'}}>
                                         <a href="/" className="subreddit_name" style={{color: 'rgb(28, 28, 28)'}}>
-                                            r/{props.subredditName}
+                                            r/{faker.random.word()}
                                         </a>
                                     </div>
                                     <span className="post_divider">•</span>
                                     <span className="posted_by">Posted by</span>
                                     <div style={{display: 'inline-block'}}>
                                         <a href="/" className="post_author">
-                                            {props.author}
+                                            {faker.internet.userName()}
                                         </a>
                                     </div>
                                     <a href="/" className="posted_date">
-                                        {props.hoursSincePosting} hours ago
+                                        {faker.random.number({min: 1, max: 23})} hours ago
                                     </a>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ const Post = (props) => {
                             <span className="post_content_title_container">
                                 <a href="/" className="post_title_url">
                                     <h2 className="post_title">
-                                        {props.title}
+                                        {faker.random.words()}
                                     </h2>
                                 </a>
                             </span>
@@ -59,7 +59,7 @@ const Post = (props) => {
                                             
                         {/* CODE FOR THE POST TEXT */}
                         <div className="post_text">
-                            {props.text}
+                            {faker.lorem.sentences()}
                         </div>
                     </div> {/* End of 'post_content_text' */}
 
@@ -70,32 +70,7 @@ const Post = (props) => {
                         </button>
                     </div>
                 </article>
-
-                {/* POST BUTTONS */}
-                <div className='post_content_buttons_container'>
-                    <div className='post_content_buttons'>
-                        <a href="/" style={{textDecoration: 'none', color: 'inherit'}} className='comment_button'>
-                            <i className='fas fa-comment-alt'></i>
-                            <span className='post_comments'>
-                                {faker.random.number()} Comments
-                            </span>
-                        </a>
-                        <div className='share_button_container'>
-                            <button className='share_button'>
-                                <i className='fas fa-share'></i>
-                                <span style={{display: 'inlineBlock', lineHeight: '1', verticalAlign: 'middle'}}>share</span>
-                            </button>
-                        </div>
-                        <button className='save_button'>
-                            <i className='fas fa-bookmark'></i>
-                            <span>save</span>
-                        </button>
-                        <a href="/" style={{textDecoration: 'none', color: 'inherit'}}>
-                            <i className='fas fa-edit'></i>
-                            <span>Edit</span>
-                        </a>
-                    </div>
-                </div>
+                {props.children}
             </div>
         </div>
     )
