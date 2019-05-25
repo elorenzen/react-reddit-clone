@@ -1,4 +1,5 @@
 import React from 'react';
+import faker from 'faker';
 
 const Post = () => {
     return (
@@ -10,7 +11,7 @@ const Post = () => {
                         <i className="fas fa-arrow-up"></i>
                     </button>
                     <div className="post_votes" style={{display: 'block', color: 'rgb(26, 26, 27)'}}>
-                        votes                 
+                        {faker.random.number()}                 
                     </div>
                     <button className="downvote">
                         <i className="fas fa-arrow-down"></i>
@@ -76,7 +77,7 @@ const Post = () => {
                         <a href="/" style={{textDecoration: 'none', color: 'inherit'}} className='comment_button'>
                             <i className='fas fa-comment-alt'></i>
                             <span className='post_comments'>
-                                Comments
+                                {faker.random.number()} Comments
                             </span>
                         </a>
                         <div className='share_button_container'>
