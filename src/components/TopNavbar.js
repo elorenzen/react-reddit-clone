@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchBar from './SearchBar';
 
 const TopNavbar = () => {
     return (
@@ -36,12 +37,8 @@ const TopNavbar = () => {
                         </ul>
                     </div>
                 </div>
-        
-                <div className="nav navbar-nav">
-                    <form className="nav-item">
-                        <input className="form-control mr-sm-2" id='nav-search' type="search" placeholder="Search Reddit" aria-label="Search" />
-                    </form>
-                </div>
+
+                <SearchBar />              
                 
                 <div className="nav-item" id='nav-icons'>
                     <a href="/"><i className="fas fa-chart-line"></i></a>
