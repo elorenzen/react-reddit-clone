@@ -5,6 +5,7 @@ import TopNavbar from './TopNavbar';
 import SecondNavbar from './SecondNavbar';
 import Sidebar from './Sidebar';
 import Post from './Post';
+import faker from 'faker';
 
 // Create React nav component
 const App = () => {
@@ -15,7 +16,30 @@ const App = () => {
             <div className="reddit_container" style={{maxWidth: '100%'}}>
                 <div className="post_container">
                     <div className="post_list">
-                        <Post />
+                        <Post
+                            votes={faker.random.number()}
+                            subredditName={faker.random.word()}
+                            author={faker.internet.userName()}
+                            hoursSincePosting={faker.random.number({min: 1, max: 23})}
+                            title={faker.random.words()}
+                            text={faker.lorem.sentences()}
+                        />
+                        <Post
+                            votes={faker.random.number()}
+                            subredditName={faker.random.word()}
+                            author={faker.internet.userName()}
+                            hoursSincePosting={faker.random.number({min: 1, max: 23})}
+                            title={faker.random.words()}
+                            text={faker.lorem.sentences()}
+                        />
+                        <Post
+                            votes={faker.random.number()}
+                            subredditName={faker.random.word()}
+                            author={faker.internet.userName()}
+                            hoursSincePosting={faker.random.number({min: 1, max: 23})}
+                            title={faker.random.words()}
+                            text={faker.lorem.sentences()}
+                        />
                     </div>
                 </div>
                 <Sidebar />
