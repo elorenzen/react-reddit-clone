@@ -4,10 +4,17 @@ class SearchBar extends React.Component {
 
     state = { term: '' };
 
+    onFormSubmit(event) {
+        // Prevents form from submitting on automatic refresh
+        event.preventDefault();
+
+        this.props.onSubmit(this.state.term);
+    }
+
     render() {
         return (
             <div className="nav navbar-nav">
-                <form className="nav-item">
+                <form onSubmit={() => this.onFormSubmit()} className="nav-item">
                     <input  
                         value={this.state.term}
                         onChange={event => this.setState({ term: event.target.value })}
