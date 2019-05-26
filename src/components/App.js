@@ -6,29 +6,32 @@ import Sidebar from './Sidebar';
 import Post from './Post';
 import Buttons from './Buttons';
 
-const App = () => {
-    return (
-        <div>
-            <TopNavbar />
-            <SecondNavbar />
-            <div className="reddit_container" style={{maxWidth: '100%'}}>
-                <div className="post_container">
-                    <div className="post_list">
-                        <Post> 
-                            <Buttons />
-                        </Post>
-                        <Post> 
-                            <Buttons />
-                        </Post>
-                        <Post> 
-                            <Buttons />
-                        </Post>    
+class App extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <TopNavbar />
+                <SecondNavbar />
+                <div className="reddit_container" style={{maxWidth: '100%'}}>
+                    <div className="post_container">
+                        <div className="post_list">
+                            <Post> 
+                                <Buttons />
+                            </Post>
+                            <Post> 
+                                <Buttons />
+                            </Post>
+                            <Post> 
+                                <Buttons />
+                            </Post>    
+                        </div>
                     </div>
+                    <Sidebar />
                 </div>
-                <Sidebar />
             </div>
-        </div>
-    ) 
+        ) 
+    }
 };
 
 export default App;
