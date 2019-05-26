@@ -9,6 +9,14 @@ import Creator from './Creator';
 
 class App extends React.Component {
 
+    onTitleSubmit(title) {
+        console.log(title);
+    }
+
+    onTextSubmit(text) {
+        console.log(text);
+    }
+
     render() {
         return (
             <div>
@@ -30,7 +38,10 @@ class App extends React.Component {
                     </div>
                     <Sidebar />
                 </div>
-                <Creator />
+                <Creator
+                    titleClick={event => this.onTitleSubmit(event)} 
+                    textClick={event => this.onTextSubmit(event)}
+                />
             </div>
         ) 
     }
