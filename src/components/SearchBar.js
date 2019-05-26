@@ -14,7 +14,7 @@ class SearchBar extends React.Component {
     render() {
         return (
             <div className="nav navbar-nav">
-                <form onSubmit={() => this.onFormSubmit()} className="nav-item">
+                <form onSubmit={(event) => this.onFormSubmit(event)} className="nav-item">
                     <input  
                         value={this.state.term}
                         onChange={event => this.setState({ term: event.target.value })}
