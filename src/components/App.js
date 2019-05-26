@@ -5,6 +5,7 @@ import SecondNavbar from './SecondNavbar';
 import Sidebar from './Sidebar';
 import Post from './Post';
 import Buttons from './Buttons';
+import Creator from './Creator';
 
 class App extends React.Component {
 
@@ -29,6 +30,7 @@ class App extends React.Component {
                     </div>
                     <Sidebar />
                 </div>
+                <Creator />
             </div>
         ) 
     }
