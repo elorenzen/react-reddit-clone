@@ -4,7 +4,11 @@ class SearchBar extends React.Component {
 
     state = { term: '' };
 
-    onFormSubmit(event) {
+    onInputChange = (event) => {
+        this.setState({ term: event.target.value });
+    }
+
+    onFormSubmit = (event) => {
         // Prevents form from submitting on automatic refresh
         event.preventDefault();
 
@@ -17,9 +21,9 @@ class SearchBar extends React.Component {
                 <form onSubmit={(event) => this.onFormSubmit(event)} className="nav-item">
                     <input  
                         value={this.state.term}
-                        onChange={event => this.setState({ term: event.target.value })}
+                        onChange={this.onInputChange}
                         className="form-control mr-sm-2" id='nav-search' 
-                        type="search" placeholder="Search Reddit" 
+                        type="text" placeholder="Search Reddit" 
                         aria-label="Search" 
                     />
                 </form>
