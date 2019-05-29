@@ -1,11 +1,20 @@
 import React from 'react';
+
 import SearchBar from './SearchBar';
+import reddit from '../apis/reddit';
 
 class TopNavbar extends React.Component {
+    state = {posts: [] };
 
-    onSearchSubmit(term) {
-        console.log(term)
-    }
+    onSearchSubmit = async (term) => {
+        const response = await reddit.get('/search.json?', {
+            params: {
+                q: term
+            }
+        })
+        this.setState({ posts: response.data.children});
+        console.log(response.data.data.children);
+    };
 
     render() {
         return (
